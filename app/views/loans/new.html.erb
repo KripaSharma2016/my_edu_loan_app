@@ -1,0 +1,7 @@
+<h2>Apply for a New Loan</h2>
+<%= simple_form_for @loan do |f| %>
+  <%= f.input :amount %>
+  <%= f.input :duration, label: "Duration (months)" %>
+  <%= f.input :status, input_html: { value: "Pending" }, as: :hidden %>
+  <%= f.button :submit %>
+<% end %>

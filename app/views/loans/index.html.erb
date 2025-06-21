@@ -1,0 +1,21 @@
+<h2 class="text-xl font-bold mb-4">Your Education Loans</h2>
+<%= link_to "Apply for New Loan", new_loan_path, class: "bg-green-500 text-white px-4 py-2 rounded" %>
+
+<table class="table-auto w-full mt-4">
+  <thead>
+    <tr>
+      <th class="px-4 py-2">Amount</th>
+      <th class="px-4 py-2">Status</th>
+      <th class="px-4 py-2">Duration (months)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @loans.each do |loan| %>
+      <tr>
+        <td class="border px-4 py-2"><%= loan.amount %></td>
+        <td class="border px-4 py-2"><%= loan.status %></td>
+        <td class="border px-4 py-2"><%= loan.duration %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

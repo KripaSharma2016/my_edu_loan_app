@@ -1,0 +1,6 @@
+<h2>EMI Dues</h2>
+<ul>
+  <% @emis.each do |emi| %>
+    <li><%= emi.due_date %> - <%= emi.amount %> - <%= emi.paid ? "Paid" : "Due" %></li>
+  <% end %>
+</ul>
